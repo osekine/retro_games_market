@@ -26,7 +26,10 @@ class GameTile extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
         child: Row(
           children: [
-            SizedBox.square(dimension: 56, child: const Placeholder()),
+            SizedBox.square(
+              dimension: 56,
+              child: const Icon(Icons.videogame_asset, size: 56),
+            ),
             Spacer(),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -38,7 +41,10 @@ class GameTile extends StatelessWidget {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    BuyButton('${vm.price ~/ 100}.${vm.price % 100}'),
+                    BuyButton(
+                      '${vm.price ~/ 100}.${vm.price % 100}',
+                      onPressed: () {},
+                    ),
                     LikeButton(vm.isFavorite, onChanged: (_) {}),
                   ],
                 ),

@@ -15,8 +15,8 @@ class BuyButton extends StatelessWidget {
     return RetroButton(
       label: priceText,
       onPressed: onPressed,
-      background: AppColors.accent,
-      foreground: AppColors.onAccent,
+      background: AppColors.surface,
+      foreground: AppColors.textPrimary,
       borderColor: t.border,
       shadow: t.retroShadow1,
       icon: Icons.shopping_cart_outlined,
