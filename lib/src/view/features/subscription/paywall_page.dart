@@ -26,7 +26,12 @@ class _PaywallScreenState extends State<PaywallPage> {
         backgroundColor: AppColors.bg,
         elevation: 0,
         centerTitle: true,
-        title: Text('Подписка', style: Theme.of(context).textTheme.titleLarge),
+        title: Text(
+          'Подписка',
+          style: Theme.of(
+            context,
+          ).textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w800),
+        ),
         actions: [
           SizedBox(
             width: 48,
@@ -81,6 +86,7 @@ class _PaywallScreenState extends State<PaywallPage> {
                 tag: 'YEARLY',
                 title: 'Год',
                 price: '€ Y.YY',
+                savings: '≈ € X / month',
                 chipText: 'SAVE 40%',
                 selected: _selected == PaywallPlan.year,
                 onTap: () => setState(() => _selected = PaywallPlan.year),

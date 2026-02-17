@@ -6,6 +6,7 @@ class PaywallPlanCard extends StatelessWidget {
   final String tag; // MONTHLY / YEARLY
   final String title; // "Месяц" / "Год"
   final String price; // "€ X.XX"
+  final String? savings;
   final String? chipText; // "SAVE 40%"
   final bool selected;
   final VoidCallback onTap;
@@ -18,6 +19,7 @@ class PaywallPlanCard extends StatelessWidget {
     required this.selected,
     required this.onTap,
     this.chipText,
+    this.savings,
   });
 
   @override
@@ -29,7 +31,7 @@ class PaywallPlanCard extends StatelessWidget {
       width: double.infinity,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          color: selected ? AppColors.surfaceAlt : AppColors.surface,
+          color: selected ? AppColors.onAccent : AppColors.bg,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: selected ? AppColors.accent : t.border,
@@ -47,6 +49,8 @@ class PaywallPlanCard extends StatelessWidget {
               child: Row(
                 children: [
                   // Left block
+                  _RetroRadio(selected: selected),
+                  SizedBox(width: 16),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,11 +83,22 @@ class PaywallPlanCard extends StatelessWidget {
                   ),
 
                   // Right price
-                  Text(
-                    price,
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      fontWeight: FontWeight.w700,
-                    ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        price,
+                        style: Theme.of(context).textTheme.titleMedium
+                            ?.copyWith(fontWeight: FontWeight.w700),
+                      ),
+                      if (savings != null)
+                        Text(
+                          '$savings',
+                          style: Theme.of(context).textTheme.bodySmall
+                              ?.copyWith(fontWeight: FontWeight.w700),
+                        ),
+                    ],
                   ),
                 ],
               ),
@@ -91,6 +106,36 @@ class PaywallPlanCard extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class _RetroRadio extends StatelessWidget {
+  const _RetroRadio({required this.selected});
+
+  final bool selected;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 24,
+      width: 24,
+      decoration: BoxDecoration(
+        color: AppColors.surfaceAlt,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: selected
+          ? Center(
+              child: Container(
+                height: 12,
+                width: 12,
+                decoration: BoxDecoration(
+                  color: AppColors.accent,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+            )
+          : const SizedBox.shrink(),
     );
   }
 }
