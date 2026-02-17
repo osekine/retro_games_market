@@ -2,6 +2,12 @@
 
 Кроссплатформенное приложение-магазин ретро-игр на Flutter (iOS/Android), с ретро UI-kit, онбордингом и подписочной моделью доступа.
 
+<img src="assets/screenshots/onboarding1.png" width="200"/>
+<img src="assets/screenshots/onboarding2.png" width="200"/>
+<img src="assets/screenshots/subscribe.png" width="200"/>
+<img src="assets/screenshots/payment.png" width="200"/>
+<img src="assets/screenshots/main.png" width="200"/>
+
 ## Флоу экранов
 
 Навигация реализована на `go_router` и зависит от состояния запуска приложения (первый/не первый запуск) и статуса подписки.
