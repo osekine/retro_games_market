@@ -5,7 +5,13 @@ import 'package:retro_games_market/src/view/uikit/theme/app_theme_ext.dart';
 import 'paywall_plan_card.dart';
 
 class PaywallPage extends StatefulWidget {
-  const PaywallPage({super.key});
+  final VoidCallback onContinue;
+  final VoidCallback onClose;
+  const PaywallPage({
+    super.key,
+    required this.onContinue,
+    required this.onClose,
+  });
 
   @override
   State<PaywallPage> createState() => _PaywallScreenState();
@@ -37,7 +43,7 @@ class _PaywallScreenState extends State<PaywallPage> {
             width: 48,
             height: 48,
             child: IconButton(
-              onPressed: () {},
+              onPressed: widget.onClose,
               icon: const Icon(Icons.close, color: AppColors.border),
               tooltip: 'Close',
             ),
@@ -114,9 +120,7 @@ class _PaywallScreenState extends State<PaywallPage> {
                 height: 48,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {
-                    // Purchase later
-                  },
+                  onPressed: widget.onContinue,
                   style: ElevatedButton.styleFrom(
                     elevation: 0,
                     backgroundColor: AppColors.accent,
