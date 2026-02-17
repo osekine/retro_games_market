@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:retro_games_market/src/view/uikit/widgets/retro_button.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_colors.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_theme_ext.dart';
+import 'package:retro_games_market/src/view/uikit/widgets/widgets.dart';
+import 'package:retro_games_market/src/view/uikit/theme/theme.dart';
 
 class BuyButton extends StatelessWidget {
   final String priceText;

@@ -1,21 +1,21 @@
 import 'i_game_view_model.dart';
 import 'i_main_view_model.dart';
-import 'i_user_profile.dart';
+import 'i_user_profile_view_model.dart';
 import 'mock_game_view_model.dart';
-import 'mock_user_profile.dart';
+import 'mock_user_profile_view_model.dart';
 
 class MockMainViewModel implements IMainViewModel {
   @override
   final List<IGameViewModel> games;
 
   @override
-  final IUserProfile user;
+  final IUserProfileViewModel user;
 
   const MockMainViewModel({required this.games, required this.user});
 
   factory MockMainViewModel.demo() {
     return MockMainViewModel(
-      user: MockUserProfile.demo(),
+      user: MockUserProfileViewModel.demo(),
       games: [
         MockGameViewModel.demo(
           title: 'Super Mario Bros.',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_colors.dart';
-import 'package:retro_games_market/src/view_model/features/main_page/i_main_view_model.dart';
+import 'package:retro_games_market/src/view/uikit/theme/theme.dart';
+import 'package:retro_games_market/src/view_model/view_model.dart';
 
 import 'profile_button.dart';
 import 'game_tile.dart';

@@ -9,7 +9,7 @@ class SegmentedCircularLoader extends StatefulWidget {
     this.segments = 12,
     this.size = 72,
     this.strokeWidth = 12,
-    this.gapRadians = 0.10, // gap between segments
+    this.gapRadians = 0.10,
     this.duration = const Duration(seconds: 1),
     this.loop = true,
   }) : assert(segments > 1);

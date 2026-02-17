@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:retro_games_market/src/view/features/main_page/buy_button.dart';
-import 'package:retro_games_market/src/view/features/main_page/like_button.dart';
-import 'package:retro_games_market/src/view/features/main_page/subtitle_text.dart';
-import 'package:retro_games_market/src/view/features/main_page/title_text.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_colors.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_theme_ext.dart';
-import 'package:retro_games_market/src/view_model/features/main_page/i_game_view_model.dart';
+import 'package:retro_games_market/src/view/uikit/theme/theme.dart';
+import 'package:retro_games_market/src/view_model/view_model.dart';
+
+import 'buy_button.dart';
+import 'like_button.dart';
+import 'subtitle_text.dart';
+import 'title_text.dart';
 
 class GameTile extends StatelessWidget {
   final IGameViewModel vm;

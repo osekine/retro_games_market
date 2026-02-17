@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_colors.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_theme_ext.dart';
+import 'package:retro_games_market/src/view/uikit/theme/theme.dart';
 
 class PageDotsIndicator extends StatelessWidget {
   final int count;

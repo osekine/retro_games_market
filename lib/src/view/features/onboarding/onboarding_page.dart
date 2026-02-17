@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:retro_games_market/src/view_model/features/onboarding_page/i_onboarding_view_model.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_colors.dart';
-import 'package:retro_games_market/src/view/uikit/theme/app_theme_ext.dart';
+import 'package:retro_games_market/src/view_model/view_model.dart';
+import 'package:retro_games_market/src/view/uikit/theme/theme.dart';
+
 import 'onboarding_illustration_card.dart';
 import 'page_dots_indicator.dart';
 

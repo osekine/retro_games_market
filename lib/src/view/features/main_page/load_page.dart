@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:retro_games_market/src/view/uikit/widgets/segmented_cirular_loader.dart';
+import 'package:retro_games_market/src/view/uikit/widgets/widgets.dart';
 
 class LoadPage extends StatelessWidget {
   const LoadPage({super.key});

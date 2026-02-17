@@ -29,7 +29,7 @@ class _AppState extends State<App> {
 
     _router = AppRouter.create(_startup);
 
-    _startup.load(); // загружаем persisted состояние
+    _startup.load();
   }
 
   @override
