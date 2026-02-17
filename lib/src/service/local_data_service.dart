@@ -41,9 +41,6 @@ class LocalDataService implements IDataService {
     final prefs = await _instance;
     final key = id.toString();
 
-    if (!prefs.containsKey(key)) {
-      throw StateError('No value found for key "$key"');
-    }
 
     final value = prefs.get(key);
 
