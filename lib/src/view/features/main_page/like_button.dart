@@ -14,7 +14,7 @@ class LikeButton extends StatelessWidget {
 
     final disabled = onChanged == null;
     final bg = isFavorite ? AppColors.accent : AppColors.surface;
-    final fg = isFavorite ? AppColors.onAccent : AppColors.border;
+    final fg =  AppColors.border;
 
     return Padding(
       padding: const EdgeInsets.only(left: 8),
@@ -33,7 +33,7 @@ class LikeButton extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8),
               child: Icon(
-                isFavorite ? Icons.favorite : Icons.favorite_border,
+                Icons.favorite_border,
                 size: 20,
                 color: disabled ? AppColors.textDisabled : fg,
               ),

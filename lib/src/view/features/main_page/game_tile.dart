@@ -23,7 +23,7 @@ class GameTile extends StatelessWidget {
         boxShadow: t.retroShadow2, // 2px offset ретро-тень
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
         child: Row(
           children: [
             SizedBox.square(dimension: 56, child: const Placeholder()),
