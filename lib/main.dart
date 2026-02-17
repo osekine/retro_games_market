@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:retro_games_market/src/view/features/subscription/paywall_page.dart';
+import 'package:retro_games_market/src/view/features/subscription/process_purchase_page.dart';
 import 'package:retro_games_market/src/view/uikit/theme/app_theme.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       theme: AppTheme.light(),
       // routes: {'/main': (_) => const MainRoute()},
-      home: PaywallPage(),
+      home: ProcessPurchasePage(),
     );
   }
 }
